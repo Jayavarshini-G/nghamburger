@@ -1,0 +1,24 @@
+<p>Worklog</p>
+<hr>
+
+<!-- {{ scores | json}} -->
+
+<div class="container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Hrs Worked</td>
+                <td>Work Log</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let worklog of worklogs.worklogs">
+                <td>{{worklog.started | date:'dd/MM/yyyy'}}</td>
+                <!-- <td>{{ score.SCAssessmentDate | date:'dd/MM/yyyy' }}</td> -->
+                <td>{{worklog.timeSpent}}</td>
+                <td>{{worklog.comment}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

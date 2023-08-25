@@ -1,0 +1,31 @@
+<h2>Score Card </h2>
+<hr>
+
+<!-- {{ scores | json}} -->
+
+<div class="container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <td>Skill</td>
+                <td>Assessment Name</td>
+                <td>Date</td>
+                <td>Score</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let score of scores.response">
+                <td>{{score.skill}}</td>
+                <td>{{score.scAssessmentName}}</td>
+                <td>{{ score.SCAssessmentDate | date:'dd/MM/yyyy' }}</td>
+                <!-- <td>{{score.ScScore}}</td> -->
+                <td>{{ score.ScScore | number:'1.0-0' }}</td>
+
+                
+
+                
+
+            </tr>
+        </tbody>
+    </table>
+</div>
